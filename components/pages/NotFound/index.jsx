@@ -1,9 +1,11 @@
-import { Link, useRouteError } from 'react-router-dom';
+// import { Link, useRouteError } from 'react-router-dom';
 import React from 'react';
 import { pageWrapper } from '../../layout/PageWrapper.jsx';
+// import {Link} from 'next/js'
+
 
 export const NotFoundPage = () => {
-  const error = useRouteError();
+  // const error = useRouteError();
   console.warn(error);
 
   return pageWrapper(
@@ -11,9 +13,9 @@ export const NotFoundPage = () => {
       <h1>404 Page Not Found</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        {/* <i>{error.statusText || error.message}</i> */}
       </p>
-      <Link to='/'>
+      <Link href='/'>
         <button>Back To Home</button>
       </Link>
     </div>
